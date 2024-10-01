@@ -1,0 +1,167 @@
+/* General Navbar Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative; /* This allows the dropdown to be positioned relative to the navbar */
+  }
+  
+  .nav-logo {
+    height: 35px;
+    width: 288px;
+    margin-top: 20px;
+    margin-left: 60px;
+  }
+  
+  /* Desktop: Display inline navigation links */
+  .nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    box-sizing: border-box; /* Ensures padding, border are included in the width */
+  }
+  
+  /* Active link styling */
+  .nav-links a.active {
+    color: #0056b3; /* Highlight active link */
+    border-radius: 5px;
+  }
+  
+  .nav-links li {
+    display: inline;
+    padding: 15px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Signup button */
+  .signup-btn {
+    background: linear-gradient(to right, #56ccf2, #062276);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  
+  /* Mobile: Hide the nav links by default */
+  .menu-icon {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    /* Hide links and show menu icon on small screens */
+    .nav-links {
+      display: none; /* Initially hidden */
+      position: absolute; /* Positioned relative to the nav */
+      top: 100%; /* Right below the navbar */
+      left: 0;
+      width: 100%; /* Full width of navbar */
+      flex-direction: column;
+      padding: 0;
+      text-align: center;
+      z-index: 9;
+      background-color: beige;
+    }
+  
+    /* Show the dropdown when the menu is open */
+    .nav-links.show {
+      display: flex;
+    }
+    
+    .nav-logo {
+      width: 180px; /* Reduced width */
+      height: 25px; /* Reduced height */
+      margin-left: 20px; /* Adjust margin */
+    }
+
+    /* Show the menu icon */
+    .menu-icon {
+      display: block;
+      font-size: 30px;
+      cursor: pointer;
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      
+    }
+  
+    /* Ensure nav-links are styled for mobile */
+    .nav-links a {
+      padding: 15px;
+      width: 100%;
+      
+    }
+  
+    /* Center the signup button and make it full width */
+    .signup-btn {
+      display: block;
+      width: 100%;
+      padding: 15px;
+    }
+  }
+  
+  /* Tablet screens (between 769px and 1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .nav-links {
+      display: none; /* Initially hidden for tablet */
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      padding: 0;
+      text-align: center;
+      z-index: 9;
+      background-color: beige; /* Background color for dropdown */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    }
+  
+    /* Show the dropdown when the menu is open */
+    .nav-links.show {
+      display: flex;
+    }
+  
+    /* Ensure proper padding for tablet links */
+    .nav-links a {
+      padding: 15px;
+      width: 100%;
+    }
+  
+    /* Center the signup button and make it full width for tablets */
+    .signup-btn {
+      display: block;
+      width: 100%;
+      padding: 15px;
+    }
+
+    .menu-icon {
+      display: block; /* Display menu icon for tablets */
+      font-size: 30px;
+      cursor: pointer;
+      position: absolute;
+      right: 20px;
+      top: 15px;
+    }
+  }
+  
+  /* Large desktop screens */
+  @media (min-width: 1025px) {
+    .nav-links {
+      display: flex;
+    }
+  
+    .menu-icon {
+      display: none;
+    }
+  }
+  

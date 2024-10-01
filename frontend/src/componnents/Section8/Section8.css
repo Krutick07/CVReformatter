@@ -1,0 +1,204 @@
+/* General Styles */
+.container {
+  max-width: 100%; /* Ensure the container doesn't exceed screen width */
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+.h2s {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+/* Center the pricing divs */
+.pricing-flex {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 3rem;
+  flex-wrap: wrap; /* Ensures responsiveness for narrower screens */
+  width: 100%; /* Full width to center the divs properly */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.pricing-div {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 12px;
+  flex: 0 1 30%; /* Set the width to 30%, but flexible */
+  box-sizing: border-box; /* Ensures padding doesn't exceed 30% width */
+}
+
+.pricing-div.highlight {
+  background-color: #e0f7fa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-top {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.pricing-24 {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.price-list-wrap {
+  margin-bottom: 1.5rem;
+}
+
+/* Align price-list-flex items to the left */
+.price-list-flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.price-list-icon {
+  display: flex;
+  align-items: center;
+}
+
+.price-list-icon img {
+  width: 24px;
+  margin-right: 10px;
+}
+
+.p-reg {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}
+
+.button-wrapper {
+  margin-top: 1rem;
+}
+
+/* Add border to the secondary-button.null */
+.secondary-button {
+  background: linear-gradient(to right, #99c2f1, #013e80);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.secondary-button.null {
+  background: transparent;
+  color: #013e80;
+  border: 2px solid #013e80;
+  padding: 12px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-wrapper {
+  margin-left: 10px;
+}
+
+.arrow-wrapper img {
+  width: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .pricing-flex {
+    flex-direction: row;
+  }
+
+  .h2s {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .pricing-flex {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .h2s {
+    font-size: 1.6rem;
+  }
+
+  .pricing-div {
+    width: 80%; /* Make divs full width for narrow screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .pricing-flex {
+    flex-direction: column;
+  }
+
+  .pricing-div {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .h2s {
+    font-size: 1.4rem;
+  }
+
+  .pricing-top {
+    font-size: 1.3rem;
+  }
+
+  .pricing-24 {
+    font-size: 1rem;
+  }
+
+  .p-reg {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 10px;
+  }
+
+  .pricing-div {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .h2s {
+    font-size: 1.2rem;
+  }
+
+  .pricing-top {
+    font-size: 1.1rem;
+  }
+
+  .pricing-24 {
+    font-size: 0.9rem;
+  }
+
+  .p-reg {
+    font-size: 0.8rem;
+  }
+
+  .secondary-button {
+    padding: 10px 15px;
+  }
+
+  .arrow-wrapper img {
+    width: 16px;
+  }
+}

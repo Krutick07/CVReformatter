@@ -1,0 +1,213 @@
+/* General Styles */
+.container1 {
+  max-width: 100%;
+  margin: 0 auto; /* Center the container */
+  padding: 0 20px; /* Prevent horizontal scrolling */
+  background: linear-gradient(to top, #014995, #f0f8fb); /* Gradient from top (#014995) to bottom (#a8cedb) */
+  
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap; /* Allow items to wrap */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.cd6, .cd2, .cd3 {
+  flex: 1 1 30%; /* Allow items to shrink, with a base width */
+  margin-bottom: 20px;
+}
+
+.cd2, .cd3 {
+  /* Removed margin-left to prevent horizontal overflow */
+}
+
+.cd2 a,
+.cd3 a {
+  text-align: left;
+  font-size: 1.3rem;
+  color: black;
+  padding: 5px;
+}
+
+.footer-lgo img {
+  width: 100%; /* Make logo responsive */
+  max-width: 350px; /* Optional: Set a max width for the logo */
+  align-items: left;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #062276;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-top: 70px;
+  width: 100%; /* Take full width of the parent */
+  max-width: 600px; /* Maintain a max width */
+}
+
+.newsletter-form input[type="text"] {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 50px;
+  flex: 1; /* Allow the text input to take up remaining space */
+  min-width: 0; /* Allow shrinking below minimum width */
+}
+
+.newsletter-form input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #062276;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.form-done, .form-fail {
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+.form-done {
+  color: green;
+}
+
+.form-fail {
+  color: red;
+}
+
+.footer-link {
+  display: block;
+  font-size: 1rem;
+  color: #062276;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+.blue-link {
+  background-color: #062276;
+  height: 2px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px; 
+  margin-bottom: 0; 
+  padding-bottom: 0;
+  font-size: 1.2rem;
+  color: rgb(18, 17, 17);
+}
+
+/* Responsive Media Queries */
+
+/* Screens up to 1200px */
+@media (max-width: 1200px) {
+  .footer-flex {
+    gap: 15px;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  .newsletter-form input[type="text"] {
+    font-size: 0.9rem;
+  }
+
+  .newsletter-form input[type="submit"] {
+    font-size: 0.9rem;
+  }
+}
+
+/* Screens up to 900px */
+@media (max-width: 900px) {
+  .footer-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-lgo img {
+    width: 120px;
+  }
+
+  .cd6, .cd2, .cd3 {
+    flex: none;
+    width: 100%; /* Ensure items take full width */
+  }
+
+  .newsletter-form {
+    flex-direction: row; /* Keep in a row */
+    align-items: center; /* Align items in the center */
+  }
+
+  .newsletter-form input[type="text"] {
+    width: 100%; /* Allow input to take full width */
+    margin-bottom: 0; /* Remove bottom margin */
+  }
+}
+
+/* Screens up to 600px */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .newsletter-form {
+    width: calc(100% - 20px); /* Ensure inputs fit within the screen */
+  }
+
+  .newsletter-form input[type="text"] {
+    font-size: 0.85rem;
+  }
+
+  .newsletter-form input[type="submit"] {
+    font-size: 0.85rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+  }
+}
+
+/* Screens up to 400px */
+@media (max-width: 400px) {
+  .container {
+    padding: 10px;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  .footer-lgo img {
+    width: 100px;
+  }
+
+  .newsletter-form input[type="text"], .newsletter-form input[type="submit"] {
+    font-size: 0.8rem;
+    flex: 1; /* Ensure inputs can flexibly adjust */
+  }
+
+  .footer-bottom {
+    font-size: 0.75rem;
+  }
+}

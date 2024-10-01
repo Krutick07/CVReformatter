@@ -1,0 +1,125 @@
+/* General Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  .block {
+    background-color: rgba(6, 34, 118, .7);
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .h2s-cta {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+    color: #11ebf9;
+  }
+  
+  .button-wrapper {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center; /* Centers the button */
+  }
+  
+  .primary-button {
+    background-color: #062276;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .arrow-wrapper {
+    background-color: white; /* White background */
+    padding: 8px;
+    border-radius: 50%; /* Round shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .arrow-wrapper img {
+    width: 16px; /* Adjust arrow size */
+  }
+  
+  
+  .image-holder {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .image-holder img {
+    max-width: 80%;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  /* Screens up to 1200px */
+  @media (max-width: 1200px) {
+    .h2s {
+      font-size: 1.8rem;
+    }
+    .primary-button {
+      padding: 12px 25px;
+      font-size: 1rem;
+    }
+  }
+  
+  /* Screens up to 900px */
+  @media (max-width: 900px) {
+    .h2s {
+      font-size: 1.6rem;
+    }
+    .primary-button {
+      padding: 10px 20px;
+    }
+    .image-holder img {
+      max-width: 80%;
+    }
+  }
+  
+  /* Screens up to 600px */
+  @media (max-width: 600px) {
+    .container {
+      padding: 20px;
+    }
+    .h2s {
+      font-size: 1.4rem;
+    }
+    .primary-button {
+      padding: 8px 15px;
+      font-size: 0.95rem;
+    }
+    .image-holder img {
+      max-width: 70%;
+    }
+  }
+  
+  /* Screens up to 400px */
+  @media (max-width: 400px) {
+    .container {
+      padding: 10px;
+    }
+    .h2s {
+      font-size: 1.2rem;
+    }
+    .primary-button {
+      padding: 6px 10px;
+      font-size: 0.85rem;
+    }
+    .image-holder img {
+      max-width: 100%;
+    }
+  }
+  

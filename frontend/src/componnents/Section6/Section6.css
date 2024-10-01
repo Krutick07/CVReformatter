@@ -1,0 +1,231 @@
+/* Section6.css */
+.container {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+:root {
+    --dark: #1e1e1e;
+    --light: #f0f8fb;
+    --secondary: #56ccf2;
+    --brand: #062276;
+}
+
+.main {
+    background-color: rgba(86, 204, 242, .2);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.how-holder {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.how-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    position: relative;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.how-order-1,
+.how-order-last,
+.how-number-holder {
+    flex: 1; 
+}
+
+.how-order-1 h3 {
+    color: #00438b;
+    font-size: 30px;
+    font-family: sans-serif;
+}
+
+.how-order-1 p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 19px;
+}
+
+.how-order-1 {
+    text-align: left;
+}
+
+.how-order-last {
+    flex: 1; 
+    margin-left: auto;
+    text-align: right;
+    padding-left: 120px;
+}
+
+
+.how-number-holder {
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease, top 0.3s ease;
+    z-index: 10; 
+    opacity: 0; 
+    
+}
+
+.how-bar {
+    z-index: 1;
+    background-image: linear-gradient(to bottom, var(--brand), var(--secondary) 21%, var(--brand) 45%, var(--secondary) 75%, var(--brand));
+    border-radius: 20px;
+    width: 1%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+.how-number-holder.active {
+    opacity: 1; 
+}
+
+.how-number {
+    width: 60px;
+    height: 60px;
+    background-color: #f2f2f2;
+    color: var(--brand);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.arrow-icon {
+    width: 20px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.arrow-icon.rotate {
+    transform: rotate(180deg);
+}
+
+
+.accordion-item-content {
+    display: none;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.accordion-item-content.show {
+    display: block;
+    margin-top: 0;
+    text-align: left;
+}
+
+.accordion-item {
+    margin-bottom: 20px;
+}
+
+.accordion-item-trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background-color: white;
+    padding: 15px;
+    margin: 0;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.accordion-heading {
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.accordion-item.open .accordion-heading {
+    color: #007bff;
+}
+
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .how-item {
+        flex-direction: column;
+    }
+
+    .how-order-1,
+    .how-order-last {
+        text-align: center;
+    }
+
+    .how-number-holder {
+        position: static; 
+        margin: 10px 0; 
+        left: auto;
+        transform: none;
+        opacity: 1;
+        z-index: 1;
+    }
+
+    .how-bar {
+        position: static; 
+        width: 100%;
+        margin: 20px 0;
+        left: auto; 
+        transform: none;
+    }
+
+    .how-number-holder.active {
+        opacity: 1;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    .how-number {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .accordion-item-trigger h4 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .how-number {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .accordion-item-trigger h4 {
+        font-size: 14px;
+    }
+
+    .how-item {
+        padding: 10px;
+    }
+}

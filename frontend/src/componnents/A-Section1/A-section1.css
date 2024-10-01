@@ -1,0 +1,104 @@
+/* Base styles for large screens (desktop) */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .about-feature-flex1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    flex-direction: row;  /* Row layout for larger screens */
+  }
+  
+  .about-feature1 {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .A-h2s {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+  }
+  
+  .feature-p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  .about-feature-img1 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about-feature-img1 .image1 {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Media query for screens 900px and below (tablets) */
+  @media (max-width: 900px) {
+    .about-feature-flex1 {
+      flex-direction: column;  /* Stack divs vertically on smaller screens */
+      align-items: center;
+      text-align: center;  /* Center content */
+    }
+  
+    .about-feature1 {
+      padding-right: 0;
+      margin-bottom: 20px;  /* Add spacing below the text */
+    }
+  
+    .A-h2s {
+      font-size: 1.8rem;
+    }
+  
+    .feature-p {
+      font-size: 1rem;
+    }
+  
+    .about-feature-img1 .image1 {
+      max-width: 400px;  /* Reduce image size */
+    }
+  }
+  
+  /* Media query for screens 600px and below (mobile) */
+  @media (max-width: 600px) {
+    .A-h2s {
+      font-size: 1.6rem;
+    }
+  
+    .feature-p {
+      font-size: 0.95rem;
+    }
+  
+    .about-feature-img1 .image1 {
+      max-width: 350px;
+    }
+  }
+  
+  /* Media query for screens 400px and below (very small mobile screens) */
+  @media (max-width: 400px) {
+    .A-h2s {
+      font-size: 1.4rem;
+    }
+  
+    .feature-p {
+      font-size: 0.85rem;
+    }
+  
+    .about-feature-img1 .image1 {
+      max-width: 300px;
+    }
+  }
+  

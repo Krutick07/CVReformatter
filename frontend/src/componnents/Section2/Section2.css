@@ -1,0 +1,92 @@
+.section2 {
+    background-color: transparent; /* light gray background */
+    padding: 40px 0; /* add some padding to the section */
+  }
+  
+  .container {
+    max-width: 1200px; /* set a max width for the container */
+    margin: 0 auto; /* center the container */
+    padding: 0 20px; /* add some padding to the container */
+  }
+  
+  .logo-wrap {
+    display: flex; /* make the logo wrap a flex container */
+    flex-direction: column; /* stack the elements vertically */
+    align-items: center; /* center the elements horizontally */
+    background-color: #b2e7f9;
+    border-radius: 10px;
+  }
+  
+  .text {
+    font-size: 24px; /* set the font size for the heading */
+    font-weight: 500; /* set the font weight for the heading */
+    margin-bottom: 20px; /* add some margin below the heading */
+    color: #062276;
+    font-weight: 300;
+  }
+  
+  .logo-flex {
+    display: flex; /* make the logo flex a flex container */
+    flex-wrap: wrap; /* allow the logos to wrap to the next line */
+    justify-content: center; /* center the logos horizontally */
+  }
+  
+  .logo-holder {
+    margin: 20px; /* add some margin around each logo holder */
+    width: 120px; /* set a width for each logo holder */
+    height: 40px; /* set a height for each logo holder */
+    display: flex; /* make the logo holder a flex container */
+    justify-content: center; /* center the logo horizontally */
+    align-items: center; /* center the logo vertically */
+  }
+  
+  .logo-holder img {
+    max-width: 100%; /* make the logo image take up the full width */
+    height: auto; /* set the height to auto to maintain aspect ratio */
+  }
+  
+  /* Media queries for responsiveness */
+  
+  /* For screens smaller than 1200px */
+  @media (max-width: 1199px) {
+    .container {
+      max-width: 900px; /* adjust the max width for smaller screens */
+    }
+    .logo-holder {
+      width: 90px; /* adjust the width for smaller screens */
+      height: 30px; /* adjust the height for smaller screens */
+    }
+  }
+  
+  /* For screens smaller than 900px */
+  @media (max-width: 899px) {
+    .container {
+      max-width: 600px; /* adjust the max width for smaller screens */
+    }
+    .logo-holder {
+      width: 60px; /* adjust the width for smaller screens */
+      height: 20px; /* adjust the height for smaller screens */
+    }
+  }
+  
+  /* For screens smaller than 600px */
+  @media (max-width: 599px) {
+    .container {
+      max-width: 400px; /* adjust the max width for smaller screens */
+    }
+    .logo-holder {
+      width: 40px; /* adjust the width for smaller screens */
+      height: 15px; /* adjust the height for smaller screens */
+    }
+  }
+  
+  /* For screens smaller than 400px */
+  @media (max-width: 399px) {
+    .container {
+      max-width: 300px; /* adjust the max width for smaller screens */
+    }
+    .logo-holder {
+      width: 30px; /* adjust the width for smaller screens */
+      height: 10px; /* adjust the height for smaller screens */
+    }
+  }
